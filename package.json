@@ -1,10 +1,10 @@
 {
-  "name": "NAME",
+  "name": "blasteroids",
   "version": "0.0.1",
-  "description": "DESCRIPTION",
+  "description": "space shooter",
   "repository": {
     "type": "git",
-    "url": "URL"
+    "url": "git@github.com:D3RPZ1LLA/blasteroids.git"
   },
   "dependencies": {
     "grunt": "~0.4.0",
