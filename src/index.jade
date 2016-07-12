@@ -1,0 +1,32 @@
+doctype html
+html
+  head
+    //- script(data-main='dist/main', src='node_modules/requirejs/require.js')
+    link(rel='stylesheet', href='dist/style.css')
+    link(rel='stylesheet', href="https://fonts.googleapis.com/css?family=Josefin+Sans")
+
+    script(src='node_modules/asteroids/keymaster/keymaster.min.js')
+    script(src='node_modules/asteroids/moving_object.js')
+    script(src='node_modules/asteroids/asteroids.js')
+    script(src='node_modules/asteroids/bullet.js')
+    script(src='node_modules/asteroids/ship.js')
+    script(src='node_modules/asteroids/game.js')
+  body
+    .grid
+    .game-container
+      img.title( src="/images/blasteroids-logo.png")
+      .row
+        canvas#canvas( width="500", height="500")
+        p.side-description
+          | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec leo quis ante mollis volutpat non vel leo. Suspendisse elit metus, aliquam nec interdum a, eleifend id justo. Suspendisse id nisl posuere magna tincidunt rhoncus vitae quis mi. Sed ultrices arcu ullamcorper tempus accumsan. Phasellus pretium arcu nec aliquet imperdiet. Nulla feugiat hendr
+      p.below-description
+        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec leo quis ante mollis volutpat non vel leo. Suspendisse elit metus, aliquam nec interdum a, eleifend id justo. Suspendisse id nisl posu
+      //- .controls
+      //-   .left-arrow <
+      //-   .up-arrow ^
+      //-   .right-arrow >
+      //-   .space-bar \___/
+    script
+      var canvas = document.querySelector( '#canvas' )
+      window.game = new window.Asteroids.Game( canvas.getContext("2d"), 500, 500 )
+      window.game.start( window )

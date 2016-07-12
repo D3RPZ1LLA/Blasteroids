@@ -22,7 +22,9 @@
     "requirejs": "~2.1.5",
     "jquery": "~2.1.0",
     "underscore": "~1.6.0",
-    "backbone": "~1.1.2"
+    "backbone": "~1.1.2",
+
+    "asteroids": "git+ssh://git@github.com:D3RPZ1LLA/asteroids.git"
   },
   "engines": {
     "node": "0.10.x"

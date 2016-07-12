@@ -1,0 +1,59 @@
+global-reset()
+
+$yellow = #cdc35d
+
+$Oswald = 'Oswald', sans-serif
+$Josefin = 'Josefin Sans', sans-serif
+
+body
+  background-image: url('/images/background-gradient.png')
+  background-size: cover
+
+.grid
+  background-image: url('/images/background-grid.png')
+  background-size: cover
+  height: 100%
+  width: 100%
+  position: absolute
+  z-index: -1
+  top: 0
+
+.game-container
+  width: 845px
+  margin: 5% auto 0 auto
+  position: relative
+
+.title
+  height: 90px
+  width: auto
+  z-index: 2
+  position: absolute
+
+.row
+  padding-top: 82px
+  clearfix()
+
+#canvas
+  float: left
+  opacity: 0.7
+
+p
+  font-family: $Josefin
+  font-size: 22px
+  color: $yellow
+  line-height: 30px
+
+.side-description
+  float: right
+  width: 285px
+  margin-top: 94px
+
+.below-description
+  margin-top: 25px
+  width: 450px
+
+.controls
+  position: absolute
+  right: 0
+  bottom: 0
+  color: #fe4528

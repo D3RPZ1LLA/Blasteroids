@@ -10,7 +10,7 @@ server.listen(port);
 console.log('\nϟϟϟ Serving on port ' + port + ' ϟϟϟ\n');
 
 app.get('/', function (req, res) {
-  res.sendfile('dist/' + '/index.html');
+  res.sendfile('dist/index.html');
 });
 
 app.get('/*' , function( req, res, next ) {
