@@ -4,9 +4,7 @@ $yellow = #fbff7e
 $controlsColor = #fbff7e
 $black = #121212
 
-$Oswald = 'Oswald', sans-serif
-$Josefin = 'Josefin Sans', sans-serif
-$Start2P = 'Press Start 2P', cursive
+$Start2P = 'Source Code Pro', sans-serif
 
 body
   background-image: url('/images/background-gradient.png')
@@ -41,7 +39,7 @@ body
 
 p
   font-family: $Start2P
-  font-size: 16px
+  font-size: 22px
   color: $yellow
   line-height: 30px
 
@@ -57,7 +55,7 @@ p
 .controls
   position: absolute
   right: 0
-  top: 500px
+  top: 493px
   color: #fe4528
   cursor: pointer
   user-select: none
@@ -67,7 +65,7 @@ p
     position: absolute
     background: $controlsColor
     border-radius: 7px
-    border: solid 1px $controlsColor
+    border: solid 2px $controlsColor
 
   svg
     height: 90px
@@ -75,26 +73,26 @@ p
     fill: $black
 
   .left-arrow
-    right: 245px
+    right: 249px
     bottom: 0px
 
   .up-arrow
     right: 171px
-    bottom: 76px
+    bottom: 80px
 
   .right-arrow
-    right: 98px
+    right: 94px
     bottom: 0px
 
   .space-bar
     right: 67px
-    bottom: -83px
+    bottom: -87px
     width: 279px
     height: 72px
     position: absolute
     background: $black
     border-radius: 7px
-    border: solid 1px $controlsColor
+    border: solid 2px $controlsColor
 
     svg
       fill: $controlsColor
