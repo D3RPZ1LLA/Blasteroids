@@ -1,9 +1,12 @@
 global-reset()
 
-$yellow = #cdc35d
+$yellow = #fbff7e
+$controlsColor = #fbff7e
+$black = #121212
 
 $Oswald = 'Oswald', sans-serif
 $Josefin = 'Josefin Sans', sans-serif
+$Start2P = 'Press Start 2P', cursive
 
 body
   background-image: url('/images/background-gradient.png')
@@ -11,7 +14,6 @@ body
 
 .grid
   background-image: url('/images/background-grid.png')
-  background-size: cover
   height: 100%
   width: 100%
   position: absolute
@@ -19,7 +21,7 @@ body
   top: 0
 
 .game-container
-  width: 845px
+  width: 900px
   margin: 5% auto 0 auto
   position: relative
 
@@ -35,18 +37,18 @@ body
 
 #canvas
   float: left
-  opacity: 0.7
+  opacity: 0.8
 
 p
-  font-family: $Josefin
-  font-size: 22px
+  font-family: $Start2P
+  font-size: 16px
   color: $yellow
   line-height: 30px
 
 .side-description
   float: right
-  width: 285px
-  margin-top: 94px
+  width: 350px
+  margin-top: 30px
 
 .below-description
   margin-top: 25px
@@ -55,5 +57,48 @@ p
 .controls
   position: absolute
   right: 0
-  bottom: 0
+  top: 500px
   color: #fe4528
+  cursor: pointer
+  user-select: none
+
+  .arrow
+    height: 72px
+    position: absolute
+    background: $controlsColor
+    border-radius: 7px
+    border: solid 1px $controlsColor
+
+  svg
+    height: 90px
+    width: auto
+    fill: $black
+
+  .left-arrow
+    right: 245px
+    bottom: 0px
+
+  .up-arrow
+    right: 171px
+    bottom: 76px
+
+  .right-arrow
+    right: 98px
+    bottom: 0px
+
+  .space-bar
+    right: 67px
+    bottom: -83px
+    width: 279px
+    height: 72px
+    position: absolute
+    background: $black
+    border-radius: 7px
+    border: solid 1px $controlsColor
+
+    svg
+      fill: $controlsColor
+      height: 75px
+      position: absolute
+      left: 107px
+      top: 5px
