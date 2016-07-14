@@ -4,13 +4,18 @@ var port = process.env.PORT || 3000
   , device = require('express-device')
   , server = require('http').Server(app);
 
+
 app.use( device.capture() );
 
 server.listen(port);
 console.log('\nϟϟϟ Serving on port ' + port + ' ϟϟϟ\n');
 
 app.get('/', function (req, res) {
-  res.sendfile('dist/index.html');
+  if ( req.device.type == 'tablet' || req.device.type == 'phone' ) {
+    res.sendfile( 'dist/mobile.html');
+  } else {
+    res.sendfile('dist/desktop.html');
+  }
 });
 
 app.get('/*' , function( req, res, next ) {

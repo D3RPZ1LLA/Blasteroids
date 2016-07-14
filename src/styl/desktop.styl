@@ -1,0 +1,98 @@
+global-reset()
+@import 'variables'
+
+body
+  background-image: url('/images/background-gradient.png')
+  background-size: cover
+
+.grid
+  background-image: url('/images/background-grid.png')
+  height: 100%
+  width: 100%
+  position: absolute
+  z-index: -1
+  top: 0
+  opacity: 0.4
+
+.game-container
+  width: 900px
+  margin: 5% auto 0 auto
+  position: relative
+
+.title
+  height: 90px
+  width: auto
+  z-index: 2
+  position: absolute
+
+.row
+  padding-top: 82px
+  clearfix()
+
+#canvas
+  float: left
+  opacity: 0.8
+
+p
+  font-family: $Start2P
+  font-size: 22px
+  color: $yellow
+  line-height: 30px
+
+.side-description
+  float: right
+  width: 350px
+  margin-top: 30px
+
+.below-description
+  margin-top: 25px
+  width: 450px
+
+.controls
+  position: absolute
+  right: 0
+  top: 493px
+  color: #fe4528
+  cursor: pointer
+  user-select: none
+
+  .arrow
+    height: 72px
+    position: absolute
+    background: $controlsColor
+    border-radius: 7px
+    border: solid 2px $controlsColor
+
+  svg
+    height: 90px
+    width: auto
+    fill: $black
+
+  .left-arrow
+    right: 249px
+    bottom: 0px
+
+  .up-arrow
+    right: 171px
+    bottom: 80px
+
+  .right-arrow
+    right: 94px
+    bottom: 0px
+
+  .space-bar
+    right: 67px
+    bottom: -87px
+    width: 279px
+    height: 72px
+    position: absolute
+    background: $black
+    border-radius: 7px
+    border: solid 2px $controlsColor
+
+    svg
+      fill: $controlsColor
+      height: 75px
+      position: absolute
+      left: 107px
+      top: 5px

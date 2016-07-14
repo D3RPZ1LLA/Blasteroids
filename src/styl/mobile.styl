@@ -1,14 +1,44 @@
 global-reset()
-
-$yellow = #fbff7e
-$controlsColor = #fbff7e
-$black = #121212
-
-$Start2P = 'Source Code Pro', sans-serif
+@import 'variables'
 
 body
   background-image: url('/images/background-gradient.png')
   background-size: cover
+  height: 100%
+  width: 100%
+  position: fixed
+
+header
+  display: -webkit-flex
+  display: flex
+  height: 70px
+
+  .title
+    display: -webkit-flex
+    display: flex
+    width: 100%
+    padding: 5px 10px 0 10px
+    img
+      max-width: 100%
+      max-height: 70px
+      width: auto
+      height: auto
+      z-index: 2
+
+  .menu-icon
+    width: 47px
+    padding: 4px 10px
+    cursor: pointer
+    margin: 15px 10px 0 0
+
+    div
+      width: 35px
+      height: 4px
+      background: $yellow
+      margin-bottom: 7px
+      border-radius: 6px
+      &:last-child
+        margin: 0
 
 .grid
   background-image: url('/images/background-grid.png')
@@ -19,24 +49,10 @@ body
   top: 0
   opacity: 0.4
 
-.game-container
-  width: 900px
-  margin: 5% auto 0 auto
-  position: relative
-
-.title
-  height: 90px
-  width: auto
-  z-index: 2
-  position: absolute
-
-.row
-  padding-top: 82px
-  clearfix()
-
 #canvas
-  float: left
+  display: block
   opacity: 0.8
+  margin-top: -10px
 
 p
   font-family: $Start2P
@@ -44,19 +60,9 @@ p
   color: $yellow
   line-height: 30px
 
-.side-description
-  float: right
-  width: 350px
-  margin-top: 30px
-
-.below-description
-  margin-top: 25px
-  width: 450px
-
 .controls
-  position: absolute
-  right: 0
-  top: 493px
+  position: fixed
+  bottom: 0
   color: #fe4528
   cursor: pointer
   user-select: none
@@ -79,7 +85,7 @@ p
 
   .up-arrow
     right: 171px
-    bottom: 80px
+    bottom: 0
 
   .right-arrow
     right: 94px

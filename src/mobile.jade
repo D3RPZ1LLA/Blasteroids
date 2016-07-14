@@ -2,8 +2,9 @@ doctype html
 html
   head
     //- script(data-main='dist/main', src='node_modules/requirejs/require.js')
-    link(rel='stylesheet', href='dist/style.css')
+    link(rel='stylesheet', href='dist/mobile.css')
     link(rel='stylesheet', href="https://fonts.googleapis.com/css?family=Source+Code+Pro")
+    meta( name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0")
 
     script(src='node_modules/asteroids/keymaster/keymaster.min.js')
     script(src='node_modules/asteroids/moving_object.js')
@@ -13,19 +14,15 @@ html
     script(src='node_modules/asteroids/game.js')
   body
     .grid
-    .game-container
-      img.title( src="/images/blasteroids-logo.png")
-      .row
-        canvas#canvas( width="500", height="500")
-        p.side-description
-          | Blasteroids is a fun space shooter written entirely in JavaScript and rendered using an HTML5 canvas.
-      p.below-description
-        | How to Play:
-        br
-        | Use the arrow keys to move.
-        br
-        | And the space-bar to shoot!
-      include arrow_keys
+    header
+      .title
+        img( src="/images/blasteroids-logo.png")
+      .menu-icon
+        div
+        div
+        div
+    canvas#canvas( width="500", height="500")
+    include arrow_keys
     script
       var canvas = document.querySelector( '#canvas' )
       window.game = new window.Asteroids.Game( canvas.getContext("2d"), 500, 500 )
