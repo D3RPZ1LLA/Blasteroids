@@ -3,7 +3,7 @@ global-reset()
 
 body
   background-image: url('/images/background-gradient.png')
-  background-size: cover
+  background-size: auto, 100%, cover
   height: 100%
   width: 100%
   position: fixed
@@ -24,6 +24,7 @@ header
       width: auto
       height: auto
       z-index: 2
+      margin-left: 5px
 
   .menu-icon
     width: 47px
@@ -52,7 +53,7 @@ header
 #canvas
   display: block
   opacity: 0.8
-  margin-top: -10px
+  margin-top: -7px
 
 p
   font-family: $Start2P
@@ -62,48 +63,54 @@ p
 
 .controls
   position: fixed
+  left: 0
   bottom: 0
   color: #fe4528
   cursor: pointer
   user-select: none
+  height: 80px
+  width: 100%
+  display: -webkit-flex
+  display: flex
 
   .arrow
     height: 72px
-    position: absolute
+    width: 72px
     background: $controlsColor
     border-radius: 7px
     border: solid 2px $controlsColor
+    margin-left: 5px
+    svg
+      height: 90px
+      width: 72px
+      fill: $black
 
-  svg
-    height: 90px
-    width: auto
-    fill: $black
+    &.pressed
+      background: $black
+      border: solid 2px $black
+      svg
+        fill: $controlsColor
 
-  .left-arrow
-    right: 249px
-    bottom: 0px
-
-  .up-arrow
-    right: 171px
-    bottom: 0
-
-  .right-arrow
-    right: 94px
-    bottom: 0px
-
-  .space-bar
-    right: 67px
-    bottom: -87px
-    width: 279px
+  .shoot-bar
+    position: relative
+    width: 100%
+    max-width: 110px
     height: 72px
-    position: absolute
     background: $black
     border-radius: 7px
+    margin: 0 5px
     border: solid 2px $controlsColor
-
+    text-align: center
     svg
       fill: $controlsColor
       height: 75px
-      position: absolute
-      left: 107px
-      top: 5px
+      display: inline-block
+      margin-top: 5px
+
+    &.pressed
+      background: $controlsColor
+      border: solid 2px $black
+      svg
+        fill: $black
+
+

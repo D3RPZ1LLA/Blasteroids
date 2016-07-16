@@ -1,7 +1,6 @@
 doctype html
 html
   head
-    //- script(data-main='dist/main', src='node_modules/requirejs/require.js')
     link(rel='stylesheet', href='dist/mobile.css')
     link(rel='stylesheet', href="https://fonts.googleapis.com/css?family=Source+Code+Pro")
     meta( name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0")
@@ -12,6 +11,8 @@ html
     script(src='node_modules/asteroids/bullet.js')
     script(src='node_modules/asteroids/ship.js')
     script(src='node_modules/asteroids/game.js')
+    script(data-main='dist/main', src='node_modules/requirejs/require.js')
+
   body
     .grid
     header
@@ -23,7 +24,3 @@ html
         div
     canvas#canvas( width="500", height="500")
     include arrow_keys
-    script
-      var canvas = document.querySelector( '#canvas' )
-      window.game = new window.Asteroids.Game( canvas.getContext("2d"), 500, 500 )
-      window.game.start( window )

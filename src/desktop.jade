@@ -1,7 +1,6 @@
 doctype html
 html
   head
-    //- script(data-main='dist/main', src='node_modules/requirejs/require.js')
     link(rel='stylesheet', href='dist/desktop.css')
     link(rel='stylesheet', href="https://fonts.googleapis.com/css?family=Source+Code+Pro")
 
@@ -26,6 +25,6 @@ html
         br
         | And the space-bar to shoot!
     script
-      var canvas = document.querySelector( '#canvas' )
-      window.game = new window.Asteroids.Game( canvas.getContext("2d"), 500, 500 )
-      window.game.start( window )
+      var canvas = document.querySelector( '#canvas' );
+      var game = new window.Asteroids.Game( canvas.getContext("2d"), 500, 500 )
+      game.start( window )
