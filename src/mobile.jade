@@ -15,8 +15,40 @@ html
 
   body
     .grid
+    .menu.closed
+      include exit
+      .background
+      .content
+        p
+          | Blasteroids is a fun space shooter written in JavaScript and rendered using an HTML5 canvas.
+        .more-projects
+          a( href="http://d3rpz1lla.github.io", target="_blank" ) View More Projects
+        h2 Credits
+        ul.credits
+          a( href="https://www.linkedin.com/in/sterlingforest", target="_blank" )
+            li.credit
+              .role Development
+              .name Sterling F
+          a( href="https://www.linkedin.com/in/outlinesvanish", target="_blank" )
+            li.credit
+              .role Design
+              .name Jen S
+          a( href="https://thenounproject.com/smashicons/", target="_blank")
+            li.credit
+              .role Arrow Icons
+              .name Oliviu S
+          a( href="https://thenounproject.com/demezette/", target="_blank" )
+            li.credit
+              .role Crosshair Icon
+              .name Anna De M
+          a( href="https://thenounproject.com/JuanGarces/", target="_blank" )
+            li.credit
+              .role "X" Exit Icon
+              .name Juan G
+
+
     header
-      .title
+      h1.title
         img( src="/images/blasteroids-logo.png")
       .menu-icon
         div

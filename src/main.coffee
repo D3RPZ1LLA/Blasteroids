@@ -15,9 +15,15 @@ require.config
     jquery:
       exports: '$'
 
-define [ 'controls', 'backbone' ], ( ControlsView ) ->
-  $canvas = $ '#canvas'
+define [ 'header', 'menu', 'controls', 'backbone' ], ( HeaderView, MenuView, ControlsView ) ->
+  header = new HeaderView { el: $( 'header' )[0] }
+  menu = new MenuView { el: $( '.menu' )[0] }
+  header.on 'openMenu', ->
+    menu.open( )
+  menu.on 'closeMenu', ->
+    header.showMenuIcon( )
 
+  $canvas = $ '#canvas'
   $canvas.attr( 'width', window.innerWidth )
   $canvas.attr( 'height', (window.innerHeight - 146) )
 

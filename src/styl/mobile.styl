@@ -8,6 +8,66 @@ body
   width: 100%
   position: fixed
 
+.menu
+  position: fixed
+  z-index: 5
+  height: 100%
+  width: 100%
+
+  &.closed
+    display: none
+
+  .background
+    position: absolute
+    z-index: 1
+    height: 100%
+    width: 100%
+    opacity: 0.5
+    background: blue
+
+  .exit
+    width: 40px
+    height: auto
+    position: absolute
+    z-index: 2
+    fill: $yellow
+    top: 15px
+    right: 17px
+
+  .more-projects
+    text-align: center
+    margin: 30px 0
+    a
+      display: inline-block
+      border: solid 3px $controlsColor
+      text-decoration: none
+      border-radius: 7px
+      padding: 10px
+
+  .content
+    position: relative
+    z-index: 2
+    margin-top: 70px
+    padding: 0 20px
+    font-family: $SourceCode
+    font-size: 22px
+    color: $yellow
+    line-height: 30px
+
+    h2
+      font-style: italic
+
+    a
+      color: $yellow
+
+    .credit
+      clearfix()
+      padding: 6px 0
+    .role
+      float: left
+    .name
+      float: right
+
 header
   display: -webkit-flex
   display: flex
@@ -31,6 +91,8 @@ header
     padding: 4px 10px
     cursor: pointer
     margin: 15px 10px 0 0
+    &.hidden
+      visibility: hidden
 
     div
       width: 35px
@@ -54,12 +116,6 @@ header
   display: block
   opacity: 0.8
   margin-top: -7px
-
-p
-  font-family: $Start2P
-  font-size: 22px
-  color: $yellow
-  line-height: 30px
 
 .controls
   position: fixed
