@@ -11,16 +11,24 @@ define [ 'backbone' ], ->
 
     events:
       'touchstart .left-arrow': 'startLeft'
+      'mousedown .left-arrow': 'startLeft'
       'touchend .left-arrow': 'endLeft'
+      'mouseup .left-arrow': 'endLeft'
 
       'touchstart .up-arrow': 'startUp'
+      'mousedown .up-arrow': 'startUp'
       'touchend .up-arrow': 'endUp'
+      'mouseup .up-arrow': 'endUp'
 
       'touchstart .right-arrow': 'startRight'
+      'mousedown .right-arrow': 'startRight'
       'touchend .right-arrow': 'endRight'
+      'mouseup .right-arrow': 'endRight'
 
       'touchstart .shoot-bar': 'startShoot'
+      'mousedown .shoot-bar': 'startShoot'
       'touchend .shoot-bar': 'endShoot'
+      'mouseup .shoot-bar': 'endShoot'
 
     startLeft: ->
       @$left_arrow.addClass 'pressed'
