@@ -18,6 +18,10 @@ app.get('/', function (req, res) {
   }
 });
 
+app.get('/mobile-demo', function (req, res) {
+  res.sendfile( 'dist/mobile_demo.html');
+});
+
 app.get('/*' , function( req, res, next ) {
     var file = req.params[0];
     res.sendfile( __dirname + '/' + file );

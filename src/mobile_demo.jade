@@ -1,0 +1,57 @@
+doctype html
+html
+  head
+    link(rel='stylesheet', href='dist/mobile.css')
+    link(rel='stylesheet', href="https://fonts.googleapis.com/css?family=Source+Code+Pro")
+
+    script(src='node_modules/asteroids/keymaster/keymaster.min.js')
+    script(src='node_modules/asteroids/moving_object.js')
+    script(src='node_modules/asteroids/asteroids.js')
+    script(src='node_modules/asteroids/bullet.js')
+    script(src='node_modules/asteroids/ship.js')
+    script(src='node_modules/asteroids/game.js')
+    script(data-main='dist/main', src='node_modules/requirejs/require.js')
+
+  body
+    .grid
+    .menu.closed
+      include exit
+      .background
+      .content
+        p
+          | Blasteroids is a fun space shooter written in JavaScript and rendered using an HTML5 canvas.
+        .more-projects
+          a( href="http://d3rpz1lla.github.io", target="_blank" ) View More Projects
+        h2 Credits
+        ul.credits
+          a( href="https://www.linkedin.com/in/sterlingforest", target="_blank" )
+            li.credit
+              .role Development
+              .name Sterling F
+          a( href="https://www.linkedin.com/in/outlinesvanish", target="_blank" )
+            li.credit
+              .role Design
+              .name Jen S
+          a( href="https://thenounproject.com/smashicons/", target="_blank")
+            li.credit
+              .role Arrow Icons
+              .name Oliviu S
+          a( href="https://thenounproject.com/demezette/", target="_blank" )
+            li.credit
+              .role Crosshair Icon
+              .name Anna De M
+          a( href="https://thenounproject.com/JuanGarces/", target="_blank" )
+            li.credit
+              .role "X" Exit Icon
+              .name Juan G
+
+
+    header
+      h1.title
+        img( src="/images/blasteroids-logo.png")
+      .menu-icon
+        div
+        div
+        div
+    canvas#canvas( width="500", height="500")
+    include arrow_keys
